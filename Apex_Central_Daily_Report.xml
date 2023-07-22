@@ -1,0 +1,448 @@
+<Export Language="en_US">
+  <_1>
+    <Template>
+      <TemplateName>Daily Apex Report</TemplateName>
+      <Description>
+      </Description>
+      <Contents>
+        <ContentUnit type="BarChart" priority="1">
+          <UnitName>Risky Hosts</UnitName>
+          <Style>
+            <Size width="750" height="600" />
+            <Background bgcolor="FFFFFF" edgecolor="000000" />
+            <Title font="Arial Bold" color="FFFFFF" bgcolor="804000" />
+            <Plotarea bgcolor="FFFFFF" altbgcolor="C0C0C0" edgecolor="000000" />
+            <Legend style="HORIZONTAL" font="Arial Bold" bgcolor="FFFFFF" edgecolor="000000" />
+            <ImageMap url="xxx.aspx" queryformat="x={x}&amp;&amp;value={value}" title="teststyle" />
+          </Style>
+          <DataSourceViewDesign ViewId="InlineAbnormalDestination" CustomViewId="5fd21453-b296-4edf-a3b6-aa2924893e3a" CreatorGuid="A8436BF2-62AA-4CAD-9625-0D506F0849FB">
+            <SelectedFields>
+              <CategoryFields Title="Endpoints" SubTitle="">
+                <CategoryField FieldId="InlineAbnormalDestination_Destination" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+              </CategoryFields>
+              <SeriesFields Title="Threat Category">
+                <SeriesField FieldId="InlineAbnormalDestination_ThreatCategory" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+              </SeriesFields>
+              <DataFields ValueTitle="Detections">
+                <DataField FieldId="InlineAbnormalDestination_IncidentCount" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+              </DataFields>
+            </SelectedFields>
+            <Criteria>
+            </Criteria>
+            <Properties>
+              <Property SortedFieldType="Category" SortedOn="Value" OrderBy="DESC" EnableFilter="true" DisplayQuantity="10" Aggregate="false">
+              </Property>
+            </Properties>
+          </DataSourceViewDesign>
+          <tb_CustomViews CV_ID="5fd21453-b296-4edf-a3b6-aa2924893e3a" CV_UserGuid="A8436BF2-62AA-4CAD-9625-0D506F0849FB" CV_BasedViewID="InlineAbnormalDestination" CV_Name="" CV_ViewType="InlineTable" CV_TMCMOnly="False" />
+          <tb_CustomCriteria CC_ID="ff1214e8-cec6-4b05-8cf4-7961e64261b2" CC_CustomViewID="5fd21453-b296-4edf-a3b6-aa2924893e3a" CC_FieldID="InlineAbnormalDestination_LastTime" CC_OperatorID="OP_STR_BETWEEN" CC_Value="13,5;%last24hours%,%now%" CC_ValueType="Date_Wizard" CC_Type="Custom" CC_MatchCondition="AND" />
+        </ContentUnit>
+        <ContentUnit type="GridTable" priority="2">
+          <UnitName>Security Threat Source Analysis Information</UnitName>
+          <Style>
+          </Style>
+          <DataSourceViewDesign ViewId="InlineAbnormalSource" CustomViewId="ec3b73f2-2213-4252-bffd-611ebbaf8ca6" CreatorGuid="A8436BF2-62AA-4CAD-9625-0D506F0849FB">
+            <SelectedFields>
+              <CategoryFields Title="" SubTitle="">
+              </CategoryFields>
+              <SeriesFields Title="">
+              </SeriesFields>
+              <DataFields ValueTitle="">
+                <DataField FieldId="InlineAbnormalSource_Source" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="InlineAbnormalSource_ThreatCategory" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="InlineAbnormalSource_ThreatName" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="InlineAbnormalSource_IncidentCount" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="InlineAbnormalSource_LastTime" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+              </DataFields>
+            </SelectedFields>
+            <Criteria>
+            </Criteria>
+            <Properties>
+              <Property SortedFieldType="Data" SortedOn="None" OrderBy="ASC" EnableFilter="true" DisplayQuantity="25" Aggregate="false">
+              </Property>
+            </Properties>
+          </DataSourceViewDesign>
+          <tb_CustomViews CV_ID="ec3b73f2-2213-4252-bffd-611ebbaf8ca6" CV_UserGuid="A8436BF2-62AA-4CAD-9625-0D506F0849FB" CV_BasedViewID="InlineAbnormalSource" CV_Name="" CV_ViewType="InlineTable" CV_TMCMOnly="False" />
+          <tb_CustomCriteria CC_ID="9c4197cb-97c3-45c0-9e25-ab8230877b70" CC_CustomViewID="ec3b73f2-2213-4252-bffd-611ebbaf8ca6" CC_FieldID="InlineAbnormalSource_LastTime" CC_OperatorID="OP_STR_BETWEEN" CC_Value="13,5;%last24hours%,%now%" CC_ValueType="Date_Wizard" CC_Type="Custom" CC_MatchCondition="AND" />
+        </ContentUnit>
+        <ContentUnit type="GridTable" priority="3">
+          <UnitName>Endpoint Virus/Malware</UnitName>
+          <Style>
+          </Style>
+          <DataSourceViewDesign ViewId="VirusHostDetail" CustomViewId="5cd2d69c-dadf-4152-a7be-f72e20200bfd" CreatorGuid="A8436BF2-62AA-4CAD-9625-0D506F0849FB">
+            <SelectedFields>
+              <CategoryFields Title="" SubTitle="">
+              </CategoryFields>
+              <SeriesFields Title="">
+              </SeriesFields>
+              <DataFields ValueTitle="">
+                <DataField FieldId="VirusHostDetail_EntityName" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="VirusHostDetail_IPAddressList" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="VirusHostDetail_ServerName" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="VirusHostDetail_VirusName" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="VirusHostDetail_InfectionDestination" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="VirusHostDetail_LoginUserName" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="VirusHostDetail_ScanType" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="VirusHostDetail_FileName" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="VirusHostDetail_FilePath" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="VirusHostDetail_FileCompressed" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="VirusHostDetail_ActionResult" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="VirusHostDetail_ActionGroup" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="VirusHostDetail_DetectionCount" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+              </DataFields>
+            </SelectedFields>
+            <Criteria>
+            </Criteria>
+            <Properties>
+              <Property SortedFieldType="Data" SortedOn="None" OrderBy="ASC" EnableFilter="true" DisplayQuantity="25" Aggregate="false">
+              </Property>
+            </Properties>
+          </DataSourceViewDesign>
+          <tb_CustomViews CV_ID="5cd2d69c-dadf-4152-a7be-f72e20200bfd" CV_UserGuid="A8436BF2-62AA-4CAD-9625-0D506F0849FB" CV_BasedViewID="VirusHostDetail" CV_Name="" CV_ViewType="Normalized" CV_TMCMOnly="False" />
+          <tb_CustomCriteria CC_ID="7621f3da-2a5d-4f51-b2d5-a5ed7005c6bf" CC_CustomViewID="5cd2d69c-dadf-4152-a7be-f72e20200bfd" CC_FieldID="VirusHostDetail_ReceivedTime" CC_OperatorID="OP_STR_BETWEEN" CC_Value="13,5;%last24hours%,%now%" CC_ValueType="Date_Wizard" CC_Type="Custom" CC_MatchCondition="AND" />
+        </ContentUnit>
+        <ContentUnit type="GridTable" priority="4">
+          <UnitName>Endpoint Spyware/Grayware</UnitName>
+          <Style>
+          </Style>
+          <DataSourceViewDesign ViewId="SpywareHostDetail" CustomViewId="2e40a4e1-a080-480c-8ca0-ea049136634c" CreatorGuid="A8436BF2-62AA-4CAD-9625-0D506F0849FB">
+            <SelectedFields>
+              <CategoryFields Title="" SubTitle="">
+              </CategoryFields>
+              <SeriesFields Title="">
+              </SeriesFields>
+              <DataFields ValueTitle="">
+                <DataField FieldId="SpywareHostDetail_DetectionTime" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="SpywareHostDetail_IPAddressList" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="SpywareHostDetail_SpywareName" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="SpywareHostDetail_InfectionDestination" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="SpywareHostDetail_InfectionSource" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="SpywareHostDetail_LoginUserName" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="SpywareHostDetail_ScanType" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="SpywareHostDetail_ResourceName" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="SpywareHostDetail_ScannerID" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="SpywareHostDetail_RiskType" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="SpywareHostDetail_RiskLevel" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="SpywareHostDetail_ActionGroup" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="SpywareHostDetail_ActionResult" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="SpywareHostDetail_DetectionCount" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+              </DataFields>
+            </SelectedFields>
+            <Criteria>
+            </Criteria>
+            <Properties>
+              <Property SortedFieldType="Data" SortedOn="None" OrderBy="ASC" EnableFilter="true" DisplayQuantity="25" Aggregate="false">
+              </Property>
+            </Properties>
+          </DataSourceViewDesign>
+          <tb_CustomViews CV_ID="2e40a4e1-a080-480c-8ca0-ea049136634c" CV_UserGuid="A8436BF2-62AA-4CAD-9625-0D506F0849FB" CV_BasedViewID="SpywareHostDetail" CV_Name="" CV_ViewType="Normalized" CV_TMCMOnly="False" />
+          <tb_CustomCriteria CC_ID="10eb25f1-53f3-467d-ae34-770ce6ed58d7" CC_CustomViewID="2e40a4e1-a080-480c-8ca0-ea049136634c" CC_FieldID="SpywareHostDetail_ReceivedTime" CC_OperatorID="OP_STR_BETWEEN" CC_Value="13,5;%last24hours%,%now%" CC_ValueType="Date_Wizard" CC_Type="Custom" CC_MatchCondition="AND" />
+        </ContentUnit>
+        <ContentUnit type="GridTable" priority="5">
+          <UnitName>Predictive Machine Learning</UnitName>
+          <Style>
+          </Style>
+          <DataSourceViewDesign ViewId="MachineLearningDetail" CustomViewId="3acb003c-d925-4dab-a6df-3c7265096878" CreatorGuid="A8436BF2-62AA-4CAD-9625-0D506F0849FB">
+            <SelectedFields>
+              <CategoryFields Title="" SubTitle="">
+              </CategoryFields>
+              <SeriesFields Title="">
+              </SeriesFields>
+              <DataFields ValueTitle="">
+                <DataField FieldId="MachineLearningDetail_DetectionTime" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="MachineLearningDetail_EntityName" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="MachineLearningDetail_IPAddressList" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="MachineLearningDetail_ThreatType" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="MachineLearningDetail_DetectionName" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="MachineLearningDetail_LoginUserName" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="MachineLearningDetail_DetectionType" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="MachineLearningDetail_FilePath" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="MachineLearningDetail_FileCreationDate" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="MachineLearningDetail_ParentProcess" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="MachineLearningDetail_ProcessCommandLine" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="MachineLearningDetail_ProcessOwner" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="MachineLearningDetail_InfectionChannel" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="MachineLearningDetail_InfectionLocation" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="MachineLearningDetail_Confidence" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="MachineLearningDetail_ActionResult" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="MachineLearningDetail_Subject" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="MachineLearningDetail_DeliverTime" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="MachineLearningDetail_Sender" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="MachineLearningDetail_Recipient" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+              </DataFields>
+            </SelectedFields>
+            <Criteria>
+            </Criteria>
+            <Properties>
+              <Property SortedFieldType="Data" SortedOn="None" OrderBy="ASC" EnableFilter="true" DisplayQuantity="25" Aggregate="false">
+              </Property>
+            </Properties>
+          </DataSourceViewDesign>
+          <tb_CustomViews CV_ID="3acb003c-d925-4dab-a6df-3c7265096878" CV_UserGuid="A8436BF2-62AA-4CAD-9625-0D506F0849FB" CV_BasedViewID="MachineLearningDetail" CV_Name="" CV_ViewType="Normalized" CV_TMCMOnly="False" />
+          <tb_CustomCriteria CC_ID="8354606f-be46-4078-a0f7-f43d96b4f6db" CC_CustomViewID="3acb003c-d925-4dab-a6df-3c7265096878" CC_FieldID="MachineLearningDetail_DetectionTime" CC_OperatorID="OP_STR_BETWEEN" CC_Value="13,5;%last24hours%,%now%" CC_ValueType="Date_Wizard" CC_Type="Custom" CC_MatchCondition="AND" />
+        </ContentUnit>
+        <ContentUnit type="GridTable" priority="6">
+          <UnitName>Detailed Behavior Monitoring Information</UnitName>
+          <Style>
+          </Style>
+          <DataSourceViewDesign ViewId="BehaviorMonitor" CustomViewId="71911086-e929-415f-a4e4-0a5fb2b91d53" CreatorGuid="A8436BF2-62AA-4CAD-9625-0D506F0849FB">
+            <SelectedFields>
+              <CategoryFields Title="" SubTitle="">
+              </CategoryFields>
+              <SeriesFields Title="">
+              </SeriesFields>
+              <DataFields ValueTitle="">
+                <DataField FieldId="BehaviorMonitor_DetectionTime" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="BehaviorMonitor_ComputerName" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="BehaviorMonitor_RiskLevel" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="BehaviorMonitor_LogType" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="BehaviorMonitor_PolicyID" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="BehaviorMonitor_AegisSubject" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="BehaviorMonitor_EventType" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="BehaviorMonitor_AegisObject" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="BehaviorMonitor_TranslatedAegisAction" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="BehaviorMonitor_TranslatedAegisOperation" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="BehaviorMonitor_Endpoint" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="BehaviorMonitor_EndpointIP" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="BehaviorMonitor_EndpointInfectionChannel" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="BehaviorMonitor_TreePath" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+              </DataFields>
+            </SelectedFields>
+            <Criteria>
+            </Criteria>
+            <Properties>
+              <Property SortedFieldType="Data" SortedOn="None" OrderBy="ASC" EnableFilter="true" DisplayQuantity="25" Aggregate="false">
+              </Property>
+            </Properties>
+          </DataSourceViewDesign>
+          <tb_CustomViews CV_ID="71911086-e929-415f-a4e4-0a5fb2b91d53" CV_UserGuid="A8436BF2-62AA-4CAD-9625-0D506F0849FB" CV_BasedViewID="BehaviorMonitor" CV_Name="" CV_ViewType="Normalized" CV_TMCMOnly="False" />
+          <tb_CustomCriteria CC_ID="1c2a8dac-1f98-4a87-86f1-a98d73ddad37" CC_CustomViewID="71911086-e929-415f-a4e4-0a5fb2b91d53" CC_FieldID="BehaviorMonitor_DetectionTime" CC_OperatorID="OP_STR_BETWEEN" CC_Value="13,5;%last24hours%,%now%" CC_ValueType="Date_Wizard" CC_Type="Custom" CC_MatchCondition="AND" />
+        </ContentUnit>
+        <ContentUnit type="GridTable" priority="7">
+          <UnitName>Detailed Web Violation Information</UnitName>
+          <Style>
+          </Style>
+          <DataSourceViewDesign ViewId="WebViolation" CustomViewId="b535f47f-2079-4747-b87e-b9c4118d19d2" CreatorGuid="A8436BF2-62AA-4CAD-9625-0D506F0849FB">
+            <SelectedFields>
+              <CategoryFields Title="" SubTitle="">
+              </CategoryFields>
+              <SeriesFields Title="">
+              </SeriesFields>
+              <DataFields ValueTitle="">
+                <DataField FieldId="WebViolation_DetectionTime" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="WebViolation_Direction" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="WebViolation_Protocol" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="WebViolation_URL" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="WebViolation_LoginUser" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="WebViolation_UserGroupName" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="WebViolation_Recipient" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="WebViolation_ClientIP" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="WebViolation_ServerIP" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="WebViolation_BlockingType" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="WebViolation_BlockingRule" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="WebViolation_PolicyName" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="WebViolation_FileName" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="WebViolation_ProcessName" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="WebViolation_ReputationScore" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="WebViolation_ActionResult" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="WebViolation_DetectionCount" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+              </DataFields>
+            </SelectedFields>
+            <Criteria>
+            </Criteria>
+            <Properties>
+              <Property SortedFieldType="Data" SortedOn="None" OrderBy="ASC" EnableFilter="true" DisplayQuantity="25" Aggregate="false">
+              </Property>
+            </Properties>
+          </DataSourceViewDesign>
+          <tb_CustomViews CV_ID="b535f47f-2079-4747-b87e-b9c4118d19d2" CV_UserGuid="A8436BF2-62AA-4CAD-9625-0D506F0849FB" CV_BasedViewID="WebViolation" CV_Name="" CV_ViewType="Normalized" CV_TMCMOnly="False" />
+          <tb_CustomCriteria CC_ID="b9391c76-1c5f-4cad-9970-ba026c632695" CC_CustomViewID="b535f47f-2079-4747-b87e-b9c4118d19d2" CC_FieldID="WebViolation_DetectionTime" CC_OperatorID="OP_STR_BETWEEN" CC_Value="13,5;%last24hours%,%now%" CC_ValueType="Date_Wizard" CC_Type="Custom" CC_MatchCondition="AND" />
+        </ContentUnit>
+        <ContentUnit type="GridTable" priority="8">
+          <UnitName>Detailed C&amp;C Callback Information</UnitName>
+          <Style>
+          </Style>
+          <DataSourceViewDesign ViewId="CnCDetection" CustomViewId="15d19760-f426-46dc-be4d-a7d92e473db2" CreatorGuid="A8436BF2-62AA-4CAD-9625-0D506F0849FB">
+            <SelectedFields>
+              <CategoryFields Title="" SubTitle="">
+              </CategoryFields>
+              <SeriesFields Title="">
+              </SeriesFields>
+              <DataFields ValueTitle="">
+                <DataField FieldId="CnCDetection_DetectionTime" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="CnCDetection_AffectedIdentity" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="CnCDetection_CnCObjects" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="CnCDetection_CnCSource" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="CnCDetection_CnCGroups" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="CnCDetection_WRSRiskLevel" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="CnCDetection_CnCLocation" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="CnCDetection_ProcessName" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="CnCDetection_FirstSeen" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="CnCDetection_LastSeen" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="CnCDetection_MalwareFamilies" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+              </DataFields>
+            </SelectedFields>
+            <Criteria>
+            </Criteria>
+            <Properties>
+              <Property SortedFieldType="Data" SortedOn="None" OrderBy="ASC" EnableFilter="true" DisplayQuantity="25" Aggregate="false">
+              </Property>
+            </Properties>
+          </DataSourceViewDesign>
+          <tb_CustomViews CV_ID="15d19760-f426-46dc-be4d-a7d92e473db2" CV_UserGuid="A8436BF2-62AA-4CAD-9625-0D506F0849FB" CV_BasedViewID="CnCDetection" CV_Name="" CV_ViewType="Normalized" CV_TMCMOnly="False" />
+          <tb_CustomCriteria CC_ID="2a764842-793c-4a92-8207-11b726651820" CC_CustomViewID="15d19760-f426-46dc-be4d-a7d92e473db2" CC_FieldID="CnCDetection_DetectionTime" CC_OperatorID="OP_STR_BETWEEN" CC_Value="13,5;%last24hours%,%now%" CC_ValueType="Date_Wizard" CC_Type="Custom" CC_MatchCondition="AND" />
+        </ContentUnit>
+        <ContentUnit type="GridTable" priority="9">
+          <UnitName>Detailed Intrusion Prevention Information</UnitName>
+          <Style>
+          </Style>
+          <DataSourceViewDesign ViewId="IntrusionPrevention" CustomViewId="b2fb9364-c374-4f8d-8181-9f6149c79783" CreatorGuid="A8436BF2-62AA-4CAD-9625-0D506F0849FB">
+            <SelectedFields>
+              <CategoryFields Title="" SubTitle="">
+              </CategoryFields>
+              <SeriesFields Title="">
+              </SeriesFields>
+              <DataFields ValueTitle="">
+                <DataField FieldId="IntrusionPrevention_LogGenLocalDatetime" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="IntrusionPrevention_ProductEntity" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="IntrusionPrevention_InterestedIP" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="IntrusionPrevention_Reason" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="IntrusionPrevention_Mode" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="IntrusionPrevention_Action" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="IntrusionPrevention_ConnectionType" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="IntrusionPrevention_PeerIP" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="IntrusionPrevention_SourceIP" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="IntrusionPrevention_SourceMAC" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="IntrusionPrevention_SourcePort" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="IntrusionPrevention_DestinationIP" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="IntrusionPrevention_DestinationMAC" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="IntrusionPrevention_DestinationPort" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="IntrusionPrevention_InterestedMAC" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="IntrusionPrevention_Protocol" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="IntrusionPrevention_Direction" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="IntrusionPrevention_Rank" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="IntrusionPrevention_SeverityCode" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+              </DataFields>
+            </SelectedFields>
+            <Criteria>
+            </Criteria>
+            <Properties>
+              <Property SortedFieldType="Data" SortedOn="None" OrderBy="ASC" EnableFilter="true" DisplayQuantity="25" Aggregate="false">
+              </Property>
+            </Properties>
+          </DataSourceViewDesign>
+          <tb_CustomViews CV_ID="b2fb9364-c374-4f8d-8181-9f6149c79783" CV_UserGuid="A8436BF2-62AA-4CAD-9625-0D506F0849FB" CV_BasedViewID="IntrusionPrevention" CV_Name="" CV_ViewType="Normalized" CV_TMCMOnly="False" />
+          <tb_CustomCriteria CC_ID="6a29969e-029f-4982-a146-ea818aa7f8d3" CC_CustomViewID="b2fb9364-c374-4f8d-8181-9f6149c79783" CC_FieldID="IntrusionPrevention_SeverityCode" CC_OperatorID="OP_NOT_EQUAL" CC_Value="1;2" CC_ValueType="List" CC_Type="Custom" CC_MatchCondition="AND" />
+          <tb_CustomCriteria CC_ID="709df32e-6b31-4815-8934-eb9cfc9f287d" CC_CustomViewID="b2fb9364-c374-4f8d-8181-9f6149c79783" CC_FieldID="IntrusionPrevention_SeverityCode" CC_OperatorID="OP_NOT_EQUAL" CC_Value="1;1" CC_ValueType="List" CC_Type="Custom" CC_MatchCondition="AND" />
+          <tb_CustomCriteria CC_ID="c07956c1-00df-48bc-b2ac-ac95d4efe13f" CC_CustomViewID="b2fb9364-c374-4f8d-8181-9f6149c79783" CC_FieldID="IntrusionPrevention_LogGenLocalDatetime" CC_OperatorID="OP_STR_BETWEEN" CC_Value="13,5;%last24hours%,%now%" CC_ValueType="Date_Wizard" CC_Type="Custom" CC_MatchCondition="AND" />
+        </ContentUnit>
+        <ContentUnit type="GridTable" priority="10">
+          <UnitName>DLP Incident Information</UnitName>
+          <Style>
+          </Style>
+          <DataSourceViewDesign ViewId="DataLossPrevention" CustomViewId="eaad146b-f256-4db5-95f1-fbceaba1eaf7" CreatorGuid="A8436BF2-62AA-4CAD-9625-0D506F0849FB">
+            <SelectedFields>
+              <CategoryFields Title="" SubTitle="">
+              </CategoryFields>
+              <SeriesFields Title="">
+              </SeriesFields>
+              <DataFields ValueTitle="">
+                <DataField FieldId="DataLossPrevention_IncidentID" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="DataLossPrevention_DetectionTime" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="DataLossPrevention_ReceivedTime" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="DataLossPrevention_SeverityCode" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="DataLossPrevention_Status" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="DataLossPrevention_ManagerName" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="DataLossPrevention_UserDepartment" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="DataLossPrevention_PolicyName" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="DataLossPrevention_ProductEntity" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="DataLossPrevention_Product" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="DataLossPrevention_EndpointIP" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="DataLossPrevention_EndpointMAC" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="DataLossPrevention_ManagingServer" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="DataLossPrevention_Endpoint" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="DataLossPrevention_AD_DisplayName" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="DataLossPrevention_UserInViolation" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="DataLossPrevention_SenderInViolation" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="DataLossPrevention_WebSite" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="DataLossPrevention_Recipient" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="DataLossPrevention_Subject" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="DataLossPrevention_FileLocation" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="DataLossPrevention_File" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="DataLossPrevention_FileSize" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="DataLossPrevention_Policy" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="DataLossPrevention_RuleNames" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="DataLossPrevention_Template" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="DataLossPrevention_Channel" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="DataLossPrevention_Destination" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="DataLossPrevention_ActionResult" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="DataLossPrevention_DetectionCount" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+                <DataField FieldId="CloudStorage_Vendor" GroupBy="0" FunctorIndex="0" CategorizedLevel="0" SortedRank="0" OrderBy="ASC" />
+              </DataFields>
+            </SelectedFields>
+            <Criteria>
+            </Criteria>
+            <Properties>
+              <Property SortedFieldType="Data" SortedOn="None" OrderBy="ASC" EnableFilter="true" DisplayQuantity="25" Aggregate="false">
+              </Property>
+            </Properties>
+          </DataSourceViewDesign>
+          <tb_CustomViews CV_ID="eaad146b-f256-4db5-95f1-fbceaba1eaf7" CV_UserGuid="A8436BF2-62AA-4CAD-9625-0D506F0849FB" CV_BasedViewID="DataLossPrevention" CV_Name="" CV_ViewType="Normalized" CV_TMCMOnly="False" />
+          <tb_CustomCriteria CC_ID="d90390c3-eb59-4564-b866-fcff0e376a9a" CC_CustomViewID="eaad146b-f256-4db5-95f1-fbceaba1eaf7" CC_FieldID="DataLossPrevention_DetectionTime" CC_OperatorID="OP_STR_BETWEEN" CC_Value="13,5;%last24hours%,%now%" CC_ValueType="Date_Wizard" CC_Type="Custom" CC_MatchCondition="AND" />
+        </ContentUnit>
+      </Contents>
+      <TemplateLayout>
+        <table>
+          <tr>
+            <td>
+              <Item id="1" width="0.5" height="0.5" />
+            </td>
+            <td>
+              <Item id="2" width="0.5" height="0.5" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <Item id="3" width="1" height="1" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <Item id="4" width="1" height="1" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <Item id="5" width="1" height="1" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <Item id="6" width="1" height="1" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <Item id="7" width="1" height="1" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <Item id="8" width="1" height="1" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <Item id="9" width="1" height="1" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <Item id="10" width="1" height="1" />
+            </td>
+          </tr>
+        </table>
+      </TemplateLayout>
+    </Template>
+  </_1>
+</Export>
